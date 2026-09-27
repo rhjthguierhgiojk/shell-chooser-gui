@@ -71,7 +71,7 @@ chmod +x install.sh
 ./install.sh
 
 
-# Messages from dev (Winn.core)
+# Messages from dev (Winn.coder)
 we're sorry that we only support 4 shell/dotfiles as more time come in maybe it will be more patch or code update to it 
 
 
@@ -92,4 +92,4 @@ we're sorry that we only support 4 shell/dotfiles as more time come in maybe it 
 
 
 
-Made With love by Winn.core ♥️
+Made With love by Winn.coder ♥️
