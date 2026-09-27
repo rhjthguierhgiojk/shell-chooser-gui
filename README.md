@@ -76,19 +76,19 @@ we're sorry that we only support 4 shell/dotfiles as more time come in maybe it 
 
 # Support !Dotfiles/Shell!
 
-# 1. ii (illogical-impulse End-4)
+1. ii (illogical-impulse End-4)
 
 
-# 2 End4-pC (frok of ii) 
+2 End4-pC (frok of ii) 
 
 
-# 3. Serpantinum 
+3. Serpantinum 
 
 
-# 4. Caelestia Shell
+4. Caelestia Shell
 
 
 
 
 
-# Made With love by Winn.core
+Made With love by Winn.core ♥️
