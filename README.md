@@ -80,7 +80,7 @@ we're sorry that we only support 4 shell/dotfiles as more time come in maybe it 
 1. ii (illogical-impulse End-4)
 
 
-2 End4-pC (frok of ii) 
+2. End4-pC (frok of ii) 
 
 
 3. Serpantinum 
