@@ -64,8 +64,8 @@ Other Linux distributions may also work if the required dependencies are availab
 
 ## Installation guide 
 
-```
-git clone https://github.com/mrjthguierngjoik/shell-chooser-gui.git && cd shell-chooser-gui && chmod +x install.sh && ./install.sh
+```bash
+git clone https://github.com/rhjthguierhgiojk/shell-chooser-gui.git && cd shell-chooser-gui && chmod +x install.sh && ./install.sh
 ```
 
 # Messages from dev (Winn.coder)
