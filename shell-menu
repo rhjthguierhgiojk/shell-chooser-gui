@@ -1,0 +1,117 @@
+#!/usr/bin/env bash
+
+set -u
+
+LAUNCHER="$HOME/.config/quickshell/shell-selector/launch-shell.sh"
+
+show_menu() {
+
+    clear
+
+    echo "╔══════════════════════════════════════╗"
+    echo "║          SHELL SELECTOR              ║"
+    echo "╠══════════════════════════════════════╣"
+    echo "║  1) ii / illogical-impulse           ║"
+    echo "║  2) end4-pC                          ║"
+    echo "║  3) Serpantinum                      ║"
+    echo "║  4) Caelestia                        ║"
+    echo "║  r) Restart GDM                      ║"
+    echo "║  q) Quit                             ║"
+    echo "╚══════════════════════════════════════╝"
+    echo
+
+}
+
+start_shell() {
+
+    local shell="$1"
+
+    clear
+
+    if [[ ! -x "$LAUNCHER" ]]; then
+
+        echo "✗ Shell launcher not found:"
+        echo
+        echo "  $LAUNCHER"
+        echo
+        read -rp "Press Enter to return..."
+        return
+
+    fi
+
+    "$LAUNCHER" "$shell"
+
+    local status=$?
+
+    echo
+
+    if [[ $status -eq 0 ]]; then
+        echo "✓ Shell launch completed."
+    else
+        echo "⚠ Shell failed to start."
+        echo
+        echo "Check:"
+        echo "  /tmp/shell-selector/"
+    fi
+
+    echo
+    read -rp "Press Enter to return..."
+}
+
+while true; do
+
+    show_menu
+
+    read -rp "Select [1-4/r/q]: " choice
+
+    case "$choice" in
+
+        1)
+            start_shell "ii"
+            ;;
+
+        2)
+            start_shell "end4"
+            ;;
+
+        3)
+            start_shell "serpantinum"
+            ;;
+
+        4)
+            start_shell "caelestia"
+            ;;
+
+        r|R)
+
+            clear
+
+            echo "→ Restarting GDM..."
+            echo
+
+            if sudo systemctl restart gdm; then
+                echo "✓ GDM restarted."
+            else
+                echo "⚠ Failed to restart GDM."
+            fi
+
+            sleep 2
+            ;;
+
+        q|Q)
+
+            clear
+            echo "Shell Selector closed."
+            exit 0
+            ;;
+
+        *)
+
+            clear
+            echo "⚠ Invalid option."
+            sleep 1
+            ;;
+
+    esac
+
+done
